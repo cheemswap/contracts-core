@@ -1,1 +1,10 @@
 node-modules
+artifacts
+build/
+cache
+cypress/fixtures/example.json
+cypress/screenshots
+cypress/videos
+dist
+interface/config.json
+typechain-types
