@@ -6,10 +6,10 @@ import "./libraries/SafeMath.sol";
 contract CheemsERC20 is ICheemsERC20 {
     using SafeMath for uint;
 
-    string public constant name = "Cheemswap LP";
-    string public constant symbol = "CHEEMS-LP";
+    string public constant name = 'CheemSwap LPs';
+    string public constant symbol = 'CHEEMS-LP';
     uint8 public constant decimals = 18;
-    uint public totalSupply;
+    uint  public totalSupply;
     mapping(address => uint) public balanceOf;
     mapping(address => mapping(address => uint)) public allowance;
 
@@ -28,9 +28,9 @@ contract CheemsERC20 is ICheemsERC20 {
         }
         DOMAIN_SEPARATOR = keccak256(
             abi.encode(
-                keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
+                keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
                 keccak256(bytes(name)),
-                keccak256(bytes("1")),
+                keccak256(bytes('1')),
                 chainId,
                 address(this)
             )
@@ -49,20 +49,12 @@ contract CheemsERC20 is ICheemsERC20 {
         emit Transfer(from, address(0), value);
     }
 
-    function _approve(
-        address owner,
-        address spender,
-        uint value
-    ) private {
+    function _approve(address owner, address spender, uint value) private {
         allowance[owner][spender] = value;
         emit Approval(owner, spender, value);
     }
 
-    function _transfer(
-        address from,
-        address to,
-        uint value
-    ) private {
+    function _transfer(address from, address to, uint value) private {
         balanceOf[from] = balanceOf[from].sub(value);
         balanceOf[to] = balanceOf[to].add(value);
         emit Transfer(from, to, value);
@@ -78,11 +70,7 @@ contract CheemsERC20 is ICheemsERC20 {
         return true;
     }
 
-    function transferFrom(
-        address from,
-        address to,
-        uint value
-    ) external returns (bool) {
+    function transferFrom(address from, address to, uint value) external returns (bool) {
         if (allowance[from][msg.sender] != uint(-1)) {
             allowance[from][msg.sender] = allowance[from][msg.sender].sub(value);
         }
@@ -90,25 +78,17 @@ contract CheemsERC20 is ICheemsERC20 {
         return true;
     }
 
-    function permit(
-        address owner,
-        address spender,
-        uint value,
-        uint deadline,
-        uint8 v,
-        bytes32 r,
-        bytes32 s
-    ) external {
-        require(deadline >= block.timestamp, "Cheems: EXPIRED");
+    function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
+        require(deadline >= block.timestamp, 'CheemSwap: EXPIRED');
         bytes32 digest = keccak256(
             abi.encodePacked(
-                "\x19\x01",
+                '\x19\x01',
                 DOMAIN_SEPARATOR,
                 keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, value, nonces[owner]++, deadline))
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        require(recoveredAddress != address(0) && recoveredAddress == owner, "Cheems: INVALID_SIGNATURE");
+        require(recoveredAddress != address(0) && recoveredAddress == owner, 'CheemSwap: INVALID_SIGNATURE');
         _approve(owner, spender, value);
     }
 }

@@ -1,10 +1,5 @@
 pragma solidity >=0.5.0;
 
 interface ICheemsCallee {
-    function cheemsCall(
-        address sender,
-        uint amount0,
-        uint amount1,
-        bytes calldata data
-    ) external;
+    function cheemsCall(address sender, uint amount0, uint amount1, bytes calldata data) external;
 }

@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/mac/Documents/GitHub/contracts-core/contracts/CheemsERC20.sol": {
-      "lastModificationDate": 1661091795127,
-      "contentHash": "502065f4bdf0ec5cbc88606f183aacf8",
+      "lastModificationDate": 1661172318851,
+      "contentHash": "1df06db66c70592968725ee808ac9a20",
       "sourceName": "contracts/CheemsERC20.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -40,8 +40,8 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/interfaces/ICheemsERC20.sol": {
-      "lastModificationDate": 1661091667463,
-      "contentHash": "6c8384c08d5e7b8ef90660c7eb3f4b4b",
+      "lastModificationDate": 1661172200398,
+      "contentHash": "89a91d88eabdd04f7b83d95742b4a748",
       "sourceName": "contracts/interfaces/ICheemsERC20.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -75,7 +75,7 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/libraries/SafeMath.sol": {
-      "lastModificationDate": 1661091442076,
+      "lastModificationDate": 1661172249577,
       "contentHash": "a65356c329efeffba75210664f5df3cd",
       "sourceName": "contracts/libraries/SafeMath.sol",
       "solcConfig": {
@@ -147,8 +147,8 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/CheemsPair.sol": {
-      "lastModificationDate": 1661091886920,
-      "contentHash": "c1761d4748ea100d91c8ce7505b7654a",
+      "lastModificationDate": 1661172462375,
+      "contentHash": "a14440adf682cb3f518b86701bd010f5",
       "sourceName": "contracts/CheemsPair.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -190,8 +190,8 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/interfaces/ICheemsPair.sol": {
-      "lastModificationDate": 1661091689887,
-      "contentHash": "7d2048fa3154c96bbe293501567eaf8e",
+      "lastModificationDate": 1661172276844,
+      "contentHash": "a03ee62d598f71c3b11cbf08d8229799",
       "sourceName": "contracts/interfaces/ICheemsPair.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -295,7 +295,7 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/interfaces/IERC20.sol": {
-      "lastModificationDate": 1661091442086,
+      "lastModificationDate": 1661172151210,
       "contentHash": "3d2b948a9266ee66b6e739de97c7e6e9",
       "sourceName": "contracts/interfaces/IERC20.sol",
       "solcConfig": {
@@ -330,8 +330,8 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/interfaces/ICheemsFactory.sol": {
-      "lastModificationDate": 1661091680293,
-      "contentHash": "72dabc9b90170dadaf2b4092b7ff688a",
+      "lastModificationDate": 1661172391813,
+      "contentHash": "79a1c35aacd468ad2f604ba502b74398",
       "sourceName": "contracts/interfaces/ICheemsFactory.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -365,8 +365,8 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/interfaces/ICheemsCallee.sol": {
-      "lastModificationDate": 1661091623827,
-      "contentHash": "4da89915385a5f0398f0163b236d0617",
+      "lastModificationDate": 1661172423566,
+      "contentHash": "b3c8616ab1eaee5347a566ba8dbdbc79",
       "sourceName": "contracts/interfaces/ICheemsCallee.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -400,8 +400,8 @@
       ]
     },
     "/Users/mac/Documents/GitHub/contracts-core/contracts/CheemsFactory.sol": {
-      "lastModificationDate": 1661091946321,
-      "contentHash": "c4fec27a71be7a0d4d340ba19de2ca42",
+      "lastModificationDate": 1661172482938,
+      "contentHash": "6f0941307dbb00714a8685dd5aad618e",
       "sourceName": "contracts/CheemsFactory.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -435,6 +435,41 @@
       ],
       "artifacts": [
         "CheemsFactory"
+      ]
+    },
+    "/Users/mac/Documents/GitHub/contracts-core/contracts/Multicall.sol": {
+      "lastModificationDate": 1661143865387,
+      "contentHash": "4c88999ad490801f0b40d629a17c75f4",
+      "sourceName": "contracts/Multicall.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "Multicall"
       ]
     }
   }

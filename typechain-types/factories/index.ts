@@ -6,3 +6,4 @@ export * as test from "./test";
 export { CheemsERC20__factory } from "./CheemsERC20__factory";
 export { CheemsFactory__factory } from "./CheemsFactory__factory";
 export { CheemsPair__factory } from "./CheemsPair__factory";
+export { Multicall__factory } from "./Multicall__factory";

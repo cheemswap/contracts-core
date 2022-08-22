@@ -1,6 +1,6 @@
 {
     "name": "@cheemswap/contracts-core",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "🎛 Core contracts for the cheemswap protocol",
     "homepage": "https://cheemswap.dog",
     "license": "GPL-3.0-or-later",
